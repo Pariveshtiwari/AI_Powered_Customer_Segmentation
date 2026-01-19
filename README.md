@@ -1,105 +1,169 @@
-# AI_Powered_Customer_Segmentation
+# 🤖 AI Powered Customer Segmentation
 
-Overview
+An unsupervised machine learning project that segments customers into meaningful groups based on purchasing behavior. This enables targeted marketing, customer personalization, and improved business insights.
 
-This project performs customer segmentation using the K-Means clustering algorithm. The objective is to group customers based on their annual income and spending score to understand purchasing behavior and support business decision-making such as targeted marketing and personalized offers.
+---
 
-Dataset
+## 🚀 Features
 
-The dataset contains the following fields:
+* K-means clustering for segmentation
+* Clean EDA & visualization workflow
+* Model exported for reuse
+* Optional prediction script for new customers
+* Business-friendly interpretations
 
-CustomerID
+---
 
-Gender
+## 📂 Project Structure
 
-Age
+```
+📁 AI_Powered_Customer_Segmentation
+│── customer-segmentation.ipynb      # Training + EDA notebook
+│── customer_app.py                  # Prediction script/app
+│── customer_segmentation_model.pkl  # Saved clustering model
+│── Mall_Customers.csv               # Dataset
+│── requirements.txt                 # Dependencies
+└── README.md
+```
 
-Annual Income (k$)
+---
 
-Spending Score (1–100)
+## 🧠 Model Details
 
-The features used for clustering in this project are:
+* Algorithm: **K-Means Clustering**
+* Type: **Unsupervised Learning**
+* Libraries used:
 
-Annual Income (k$)
+  * pandas
+  * numpy
+  * scikit-learn
+  * matplotlib
+  * seaborn
 
-Spending Score (1–100)
+Dataset used: **Mall Customers Dataset**
 
-Approach
+---
 
-Data selection and preprocessing
+## 🏗️ Installation & Setup
 
-Determining the optimal value of K using the Elbow Method
+Clone the repository:
 
-Training K-Means on the selected features
+```bash
+git clone https://github.com/your-username/AI_Powered_Customer_Segmentation.git
+cd AI_Powered_Customer_Segmentation
+```
 
-Visualizing the clusters and their centroids
+---
 
-Comparing cluster-wise income and spending averages
+### 1️⃣ Create Virtual Environment
 
-Predicting the segment for new customer data
+```bash
+python -m venv venv
+```
 
-Model
+Activate:
 
-The K-Means algorithm is used for unsupervised clustering. The number of clusters selected in this project is 5, based on the Elbow Method.
+**Windows**
 
-Example training:
+```bash
+venv\Scripts\activate
+```
 
-kmeans = KMeans(n_clusters=5, random_state=42)
-kmeans.fit(X)
+**Mac/Linux**
 
-Cluster Interpretation
+```bash
+source venv/bin/activate
+```
 
-After training, the customers can be grouped into meaningful segments. Example segment labels include:
+---
 
-Standard Customers
+### 2️⃣ Install Dependencies
 
-Careful Customers
+```bash
+pip install -r requirements.txt
+```
 
-Target Customers
+---
 
-Careless Customers
+## 🧾 Training the Model
 
-Sensible Customers
+Training is done inside the Jupyter notebook:
 
-(Note: Labels may vary based on interpretation)
+```bash
+jupyter notebook customer-segmentation.ipynb
+```
 
-Visualizations Included
+Running all cells generates:
 
-Elbow Method curve
+```
+customer_segmentation_model.pkl
+```
 
-Scatter plot of clusters with centroids
+---
 
-Bar chart of average annual income by cluster
+## 🌐 Run the App (Optional)
 
-Bar chart of average spending score by cluster
+If `customer_app.py` is included:
 
-Prediction
+```bash
+python customer_app.py
+```
 
-The model can predict the cluster of a new incoming customer. Example:
+Enter new customer values to get a predicted segment.
 
-new_customer = np.array([[70, 80]])
-predicted_cluster = kmeans.predict(new_customer)[0]
+---
 
-Technologies Used
+## 📊 Input Features
 
-Python
+This model uses:
 
-NumPy
+* Annual Income (k$)
+* Spending Score (1–100)
 
-Pandas
+---
 
-Matplotlib
+## 📦 Requirements
 
-Seaborn
+Included in `requirements.txt`:
 
-Scikit-Learn
+```
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+joblib
+```
 
-Project Structure
-customer-segmentation.ipynb
-README.md
-dataset.csv
-requirements.txt
+Install via:
 
-Conclusion
+```bash
+pip install -r requirements.txt
+```
 
-Customer segmentation using K-Means provides valuable insights into purchasing behavior and helps businesses optimize marketing and product strategies.
+---
+
+## 📈 Visualizations Included
+
+* Elbow method
+* Cluster scatter plots
+* Centroid visualization
+* Data distribution plots
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## ⭐ Acknowledgements
+
+Dataset: Mall Customers Dataset (Kaggle)
+Technologies: Python, Scikit-Learn, Jupyter
+
+---
+
+Made with ❤️ by **Parivesh Tiwari**
+

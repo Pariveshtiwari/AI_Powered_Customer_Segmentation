@@ -14,6 +14,8 @@ An unsupervised machine learning project that segments customers into meaningful
 
 ---
 
+🌍 Live Deployment : https://aipoweredcustomersegmentation-01.streamlit.app
+
 ## 📂 Project Structure
 
 ```
